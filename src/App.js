@@ -1,7 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import ResponseForm from './components/ResponseForm'
+import Amplify from 'aws-amplify';
+import ResponseForm from './components/ResponseForm';
+import config from './aws-exports';
+
+
+Amplify.configure(config);
 
 function App() {
   return (
