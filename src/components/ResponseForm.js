@@ -44,6 +44,7 @@ class ResponseForm extends Component {
     event.preventDefault();
   }
 
+
   render() {
     const {classes} = this.props;
 
@@ -52,24 +53,20 @@ class ResponseForm extends Component {
         <div class = {classes.container} >
           <h1> What prevents you from being a great engineer? </h1>
         </div>
-        <div class={classes.container}>
           <TextField
           id="outlined-multiline-flexible"
           multiline
           rowsMax="10"
           rows="8"
           value={this.state.value}
-          onchange={this.handleChange}
+          onChange={this.handleChange}
           className={classes.textField}
           margin="normal"
           variant="outlined"
         />
-      </div>
-      <div class={classes.container}>
-        <Button variant="outlined" color="primary" className={classes.btn}>
+        <Button variant="outlined" color="primary" className={classes.btn} onClick={this.handleSubmit}>
           Submit
         </Button>
-      </div>
       </form>
     );
 
