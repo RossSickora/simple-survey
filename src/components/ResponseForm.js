@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {withStyles} from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Button } from '@material-ui/core';
-import {API, graphqlOperation} from 'aws-amplify'
+import {API, graphqlOperation} from 'aws-amplify';
+import {BrowserRouter as Router, Route, withRouter} from 'react-router-dom';
 
 import {createResponse} from '../graphql/mutations'
 
@@ -48,7 +49,7 @@ class ResponseForm extends Component {
 
   handleSubmit(event) {
     this.saveResponse();
-    
+    this.props.history.push('/exit');
     event.preventDefault();
   }
 
@@ -62,7 +63,8 @@ class ResponseForm extends Component {
           alert('an Error occured saving the fund, please try again');
         }
         else {
-          alert('A '+ this.state.name+' has submitted: ' + this.state.value);
+          //alert('A '+ this.state.name+' has submitted: ' + this.state.value);
+          
         }
       }
       catch (e) {
@@ -76,7 +78,7 @@ class ResponseForm extends Component {
 
     return (
       <form class={classes.container} noValidate autoComplete="off">
-        <div class = {classes.container} >
+        <div className={classes.container} >
           <h1> CSS Town Hall Engineering Survey</h1>
         </div>
           <TextField
@@ -112,4 +114,4 @@ class ResponseForm extends Component {
   }
 }
 
-export default withStyles(useStyles)(ResponseForm);
+export default withRouter(withStyles(useStyles)(ResponseForm));
