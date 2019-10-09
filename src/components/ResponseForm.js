@@ -26,6 +26,9 @@ const useStyles = theme => ({
     menu: {
       width: 200,
     },
+    header: {
+      flex:1
+    }
   });
   
 
@@ -78,9 +81,7 @@ class ResponseForm extends Component {
 
     return (
       <form class={classes.container} noValidate autoComplete="off">
-        <div className={classes.container} >
-          <h1> CSS Town Hall Engineering Survey</h1>
-        </div>
+          <h1 className={classes.header}> CSS Town Hall Engineering Survey</h1>
           <TextField
           id="outlined-multiline-flexible"
           multiline

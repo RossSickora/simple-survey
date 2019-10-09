@@ -20,7 +20,7 @@ class ThankYou extends Component {
         const {classes} = this.props;
         return (
             <div class={classes.container}>
-                <h1>Thank you for your submission</h1>
+                <h1>Thank you for your submission!</h1>
             </div>
         
         );
