@@ -14,7 +14,6 @@ const useStyles = theme => ({
 class ThankYou extends Component {
     constructor(props) {
         super(props);
-        this.state.results = [];
     }
 
     render() {
