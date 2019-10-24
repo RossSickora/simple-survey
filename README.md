@@ -1,3 +1,7 @@
+# Simple Survey
+
+The simple survey application is an experiment in setting up a full stack application that will take an unauthenticated user's inputs, pass it through to AWS AppSync endpoints, which will save that data to a dynamo DB Table.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
